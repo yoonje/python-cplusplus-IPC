@@ -10,10 +10,11 @@ PORT = 5000<br>
 SOCKET_PATH = "/home/yoonje/Desktop/C++/C++server/server.dat"
 
 ### Socket Progress
+- TCP/IP communication function order<br>
 ![tetris auto fast](image/tcp_prog.gif)
 
-- Server
+- Server<br>
 ![tetris auto fast](image/tcp_prog_001.gif)
 
-- Client
+- Client<br>
 ![tetris auto fast](image/tcp_prog_002.gif)
