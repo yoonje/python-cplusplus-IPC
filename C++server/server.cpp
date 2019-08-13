@@ -60,16 +60,18 @@ main()
         exit(0);
     }
 
+    // loop for persistent server
     while(1)
     {
-
+        // buffer init
         memset(buffer, 0x00, sizeof(buffer));
 
-        // client_addr init NULL
+        // client_addr init and create
         memset(&client_addr, 0, sizeof(client_addr));
         client_addr_size = sizeof(client_addr);
         client_sock = accept(server_sock, (struct sockaddr *)&client_addr, &client_addr_size);
-        
+
+        // loop for several client socket communication
         while(1)
         {
             if(client_sock < 0)
@@ -79,7 +81,7 @@ main()
             }
 
             msg_size = read(client_sock, buffer, BUFF_SIZE);
-            if(msg_size == 0)
+            if(msg_size == 0) // read() return 0 when connection broken. escape inner loop.
                 break;
             std::cout << "Received data: "<< buffer << endl;
 
@@ -87,8 +89,9 @@ main()
             std::cout << "Sent data: "<< buffer << endl;
         }
 
+        // client socket remove because connection was broken
         close(client_sock);
-    }    
+    }
     close(server_sock);
     unlink(SOCKET_PATH);
     return 0;
