@@ -13,7 +13,7 @@ using namespace std;
 #define HOST "localhost"
 #define PORT 5000
 #define BUFF_SIZE 1024
-#define SOCKET_PATH "/home/yoonje/PycharmProjects/python_socket/C++server/server.dat" // Socket file location
+#define SOCKET_PATH "/home/yoonje/PycharmProjects/python_socket/C++server/connection.sock" // Socket file location
 
 int
 main()
