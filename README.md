@@ -18,3 +18,6 @@ SOCKET_PATH = "/home/yoonje/Desktop/C++/C++server/server.dat"
 
 - Client<br>
 ![tetris auto fast](image/tcp_prog_002.gif)
+
+### Detail
+You can refer to my comment. (Parameter means...)
