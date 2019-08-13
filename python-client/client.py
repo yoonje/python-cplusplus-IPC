@@ -1,21 +1,24 @@
 import socket
 
-HOST = "localhost"
+HOST = 'localhost'
 PORT = 5000
+SOCKET_PATH = "/home/yoonje/PycharmProjects/python_socket/C++server/server.dat"  # Socket file location
+BUFF_SIZE = 1024
 
-# AF_UNIX means Local communication, SOCK_STREAM means TCP
 try:
-    sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
-    sock.connect((HOST, PORT))
+    client_sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)  # AF_UNIX means local communication, SOCK_STREAM means TCP
+    client_sock.connect(SOCKET_PATH)
     print("Socket Connected.")
 except socket.error as err:
     print("error due to: %s" % err)
+    exit(0)
 
 while True:
-    data = input(">>")  # 임의의 데이터를 입력 받는다.
-    sock.sendall(data.encode())
-    if data == "end":
-        sock.close()
+    data = input(">>")
+    client_sock.sendall(data.encode())
+    print("SEND:", data.encode())
+    if data == "END":
+        client_sock.close()
         break
-    res = sock.recv(1024)
-    print(res.decode())
+    res = client_sock.recv(BUFF_SIZE)
+    print("RECEIVE:", res.decode())

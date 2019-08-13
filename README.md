@@ -7,7 +7,7 @@ You should run C++ process before run Python process.
 ### My Setting
 HOST = localhost<br>
 PORT = 5000<br>
-SOCKET_PATH = "/home/yoonje/Desktop/C++/C++server/server.dat"
+SOCKET_PATH = "/home/yoonje/PycharmProjects/python_socket/C++server/server.dat"
 
 ### Socket Progress
 - TCP/IP communication function order<br>
