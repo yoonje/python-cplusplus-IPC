@@ -71,14 +71,15 @@ main()
         client_addr_size = sizeof(client_addr);
         client_sock = accept(server_sock, (struct sockaddr *)&client_addr, &client_addr_size);
 
+        if(client_sock < 0)
+        {
+            std::cout << "Server: accept failed.\n";
+            exit(0);
+        }
+
         // loop for several client socket communication
         while(1)
         {
-            if(client_sock < 0)
-            {
-                std::cout << "Server: accept failed.\n";
-                exit(0);
-            }
 
             msg_size = read(client_sock, buffer, BUFF_SIZE);
             if(msg_size == 0) // read() return 0 when connection broken. escape inner loop.
