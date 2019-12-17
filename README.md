@@ -7,8 +7,8 @@ Between Python(Client) process and C++(Server) process inter communication by so
 - C++ server run infinitely, Python Client run once.
 
 ### My Setting
-`HOST = localhost`
-`PORT = 5000`
+`HOST = localhost`<br>
+`PORT = 5000`<br>
 `SOCKET_PATH = "/home/yoonje/PycharmProjects/python_socket/C++server/server.dat"`
 
 ### Socket Progress
