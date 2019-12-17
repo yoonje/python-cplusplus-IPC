@@ -1,19 +1,15 @@
-### IPC 
-Between Python(Client) process and C++(Server) process socket communication.<br>
 
-IPC was communicated by socket file(.sock).
+### IPC 
+Between Python(Client) process and C++(Server) process inter communication by socket file(.sock).<br>
 
 ### Usage
-You should run C++ process before run Python process.
-
-C++ server run infinitely, Python Client run once.
+- You should run C++ process before run Python process.
+- C++ server run infinitely, Python Client run once.
 
 ### My Setting
-HOST = localhost<br>
-PORT = 5000<br>
-SOCKET_PATH = "/home/yoonje/PycharmProjects/python_socket/C++server/server.dat"<br>
-
-You can exchange setting according to your preference.
+`HOST = localhost`
+`PORT = 5000`
+`SOCKET_PATH = "/home/yoonje/PycharmProjects/python_socket/C++server/server.dat"`
 
 ### Socket Progress
 - TCP/IP communication function order<br>
@@ -26,4 +22,4 @@ You can exchange setting according to your preference.
 ![tetris auto fast](image/tcp_prog_002.gif)
 
 ### Detail
-You can refer to my comment. (Parameter means...)
+You can refer to my comment.
