@@ -20,6 +20,3 @@ Between Python(Client) process and C++(Server) process inter communication by so
 
 - Client<br>
 ![tetris auto fast](image/tcp_prog_002.gif)
-
-### Detail
-You can refer to my comment.
