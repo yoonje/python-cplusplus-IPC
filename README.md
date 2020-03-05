@@ -1,4 +1,4 @@
-# Python Cplusplus IPC 
+# Python C++ IPC 
 Between Python(Client) process and C++(Server) process inter communication by socket file(.sock).<br>
 
 ### Usage
